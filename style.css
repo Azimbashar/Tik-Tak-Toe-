@@ -1,0 +1,145 @@
+*{padding: 0px;
+  margin: 0px;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 95vh;
+  position: relative;
+  background: url("background .jpg");
+  background-size: cover;
+  position: center;
+  background-repeat: no-repeat;
+}
+
+#e1,#e2{
+  height: 100vh;
+  width: 48%;
+  border: 1vw solid white;
+  background: rgba(0, 101, 42, .9);
+  position: fixed;
+  z-index: 10;
+}
+#e1{
+  left: -50%;
+  top: 0;
+}
+#e2{
+  right: -50%;
+  top: 0;
+}
+
+.e1{
+animation: e1 1s 1;
+}
+.e2{
+animation: e2 1s 1;
+}
+
+#frame{
+  height: 80vw;
+  width: 80vw;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+}
+.btn{
+  height: 31%;
+  width: 31%;
+  margin: auto;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25vw;
+  font-weight: 600;
+  border-radius: 10px;
+  
+}
+#p1,#p2{
+  height: 15vw;
+  width: 90%;
+  border: .3vw solid;
+  margin:  15vw 0;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  backdrop-filter: blur(5px);
+
+}
+
+.timer{
+  animation: lani 8s linear 1;
+}
+
+.load{height: 5%;
+  background: red;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#p1{
+  transform: rotate(180deg)
+}
+
+h1{
+  font-size: 8vw;
+  font-weight: 300;
+}
+#point1,#point2{
+  height: 70%;
+  width: 13%;
+  border: .3vw solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2vw;
+  font-size: 6vw;
+}
+#turn1,#turn2{
+  height: 50%;
+  width: 8.3%;
+  border: .3vw solid;
+  border-radius: 50%;
+  
+}
+#turn1{
+  background: green;
+  box-shadow: 0 0 .7vw  .3vw;
+}
+#reset{
+  height: 80%;
+  width: 20%;
+  background: green;
+  border: none;
+  border-radius: 2vw;
+  font-size: 5vw;
+  box-shadow: 0 0 1vw;
+}
+
+@keyframes lani{
+  from {width: 0%;}
+  to {width: 100%;}
+}
+@keyframes e1{
+  0% {left: -50%;}
+  50% {left: 0%;}
+  100% {left: -50%;}
+}
+@keyframes e2{
+  0% {right: -50%;}
+  50% {right: 0%;}
+  100% {right: -50%;}
+}
